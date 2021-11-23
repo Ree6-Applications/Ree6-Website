@@ -3,7 +3,7 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-      <title>Ree6 - Panel</title>
+      <title>Ree6 - Logging</title>
       <link rel="icon" type="image/png" sizes="1024x1024" href="https://ree6.de/assets/img/ree6.png?h=30aa8b66578eadcbddba12405b85eb63">
       <link rel="icon" type="image/png" sizes="1024x1024" href="https://ree6.de/assets/img/ree6.png?h=30aa8b66578eadcbddba12405b85eb63">
       <link rel="icon" type="image/png" sizes="1024x1024" href="https://ree6.de/assets/img/ree6.png?h=30aa8b66578eadcbddba12405b85eb63">
@@ -41,23 +41,35 @@
                <hr style="background: rgba(0,0,0,0);height: 50px;">
             </div>
          </section>
-         <section id="features">
+         <section id="logging">
             <div class="container">
                <hr style="background: rgba(0,0,0,0);height: 50px;">
                <!-- Start: Intro -->
                <div class="intro">
-                  <h2 class="text-center" style="color: rgb(255,255,255);">Servers</h2>
+                  <h2 class="text-center" style="color: rgb(255,255,255);">Logging</h2>
                   <hr style="background: rgba(0,0,0,0);">
                </div>
                <!-- End: Intro --><!-- Start: Features -->
-               <div class="row d-inline-flex features">
-                  <div class="col-sm-6 col-lg-4 col-xxl-4 item">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-shield-check border rounded-circle d-xl-flex mx-auto justify-content-xl-center align-items-xl-center icon" data-bss-hover-animate="pulse" style="width: 50px;height: 50px;color: #ffffff;">
-                        <path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"></path>
-                        <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"></path>
-                     </svg>
-                     <h4 class="d-xl-flex mx-auto justify-content-xl-center align-items-xl-center name" style="color: rgb(255,255,255);">Test</h4>
-                     <button class="btn btn-primary d-xl-flex mx-auto justify-content-xl-center align-items-xl-center" type="button">Manage</button>
+               <div class="row d-inline-flex features" style="margin-left: -24px;margin-right: -24px;margin-top: 15px;margin-bottom: 15px;">
+                  <div class="col-sm-6 col-lg-4 col-xxl-4 item" style="margin-bottom: 5px;margin-top: 5px;">
+                     <i class="far fa-hand-peace d-xl-flex mx-auto justify-content-xl-center align-items-xl-center icon" style="width: 50px;height: 50px;color: #ffffff;font-size: 35px;"></i>
+                     <h3 class="d-xl-flex mx-auto justify-content-xl-center align-items-xl-center name" style="color: rgb(255,255,255);">Welcome-Channel</h3>
+                     <form class="d-flex justify-content-center flex-wrap" method="get">
+                        <div class="mb-3">
+                           <select class="border-dark form-select d-flex d-xl-flex flex-row justify-content-xl-start align-items-xl-center" style="background: var(--bs-gray-700);color: var(--bs-white);font-size: 12px;border-color: var(--bs-blue);height: 38px;width: 200px;">
+                              <option value="none" selected="" class="border border-dark" style="background: var(--bs-gray-700);text-align: center;color: #ffffff;">None</option>
+                              <option value="test" class="border border-dark" style="background: var(--bs-gray-700);text-align: center;color: #ffffff;">Test</option>
+                           </select>
+                        </div>
+                        <div class="mb-3"><button class="btn btn-primary" type="submit" style="background: var(--bs-blue);">Change</button></div>
+                     </form>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 item" style="margin-top: 5px;margin-bottom: 5px;">
+                     <i class="material-icons d-xl-flex mx-auto justify-content-xl-center align-items-xl-center icon" style="color: #ffffff;width: 50px;height: 50px;font-size: 30px;">border_color</i>
+                     <h3 class="d-xl-flex mx-auto justify-content-xl-center align-items-xl-center name" style="color: #ffffff;">Logs</h3>
+                     <form>
+                        <div class="mb-3"><button class="btn btn-primary d-xl-flex mx-auto justify-content-xl-center align-items-xl-center" data-bs-toggle="tooltip" data-bss-tooltip="" type="submit" style="background: var(--bs-blue);" title="Activate"><i class="fas fa-check"></i></button></div>
+                     </form>
                   </div>
                </div>
                <!-- End: Features -->
