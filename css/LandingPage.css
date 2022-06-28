@@ -144,11 +144,11 @@ body{
 }
 
 #leaddev{
-    color: #7139cc;
+    color: #7139cc !important;
 }
 
 .supportdev{
-    color: #dc3545;
+    color: #dc3545 !important;
 }
 
 #invitebutton{
