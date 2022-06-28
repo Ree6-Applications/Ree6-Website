@@ -22,10 +22,15 @@ body{
     border-radius: 20px;
     height: 24px;
     padding: .5rem 1rem;
+    margin-top: auto;
+    margin-bottom: auto;
     float: right;
 }
 #loginbutton a{
     text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
     cursor: pointer;
     color: white;
     opacity: 1;
@@ -35,6 +40,7 @@ body{
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    padding-bottom: 5%;
 }
 
 .container h1{
@@ -224,7 +230,7 @@ footer div{
     color:white;
 }
 
-@media only screen and (orientation: portrait) {
+@media only screen and (hover: none) and (pointer: coarse) {
     #boticon{
         width: 150px;
         height: 150px; 
@@ -284,8 +290,12 @@ footer div{
     
     .featureitem{
         margin-bottom: 10%;
-        padding-bottom: 10%;    
+        padding-bottom: 20%;    
         width: 80vw;
+    }
+
+    .featureitem:last-child{
+        padding-bottom: 0%;    
     }
 
     .featureitem svg{
