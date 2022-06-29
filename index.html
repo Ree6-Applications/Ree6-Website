@@ -3,25 +3,26 @@
 <head>
     <meta charset="utf-8">
     <title>Ree6 - Home</title>
+    <link rel="stylesheet" href="./css/Main.css">
     <link rel="stylesheet" href="./css/LandingPage.css">
     <link rel="icon" type="image/png" sizes="64x64" href="./assets/img/ree6-icon.png">
 
 </head>
 <body style="background-color: #212529;">
     <!--Top bar-->
-    <div class="container"  style="padding-left: 5vw;padding-right: 5vw;padding-top: 2vh;">
-        <img src="./assets/img/ree6-icon.png" id="boticon" alt="ree6-bot-icon">
+    <div class="container"  id="topbar">
+        <a href="./index.html"><img src="./assets/img/ree6-icon.png" id="boticon" alt="ree6-bot-icon"></a>
         <div style="flex: 1"></div>
         <span id="loginbutton">
             <a href="https://cp.ree6.de/discord/auth">Login</a>
         </span>
     </div>
     <div class="container" id="name-desc" style="flex-direction: column; justify-content: center; height: fit-content;">
-        <h1 style="padding-left:10px">Ree6</h1> 
-        <h2 style="padding-left:10px">The alternative to Mee6!</h2>
+        <h1>Ree6</h1> 
+        <h2>The alternative to Mee6!</h2>
     </div>
     <!--Features-->
-    <div style="background-color:#405a9d;width: 100vw; ">
+    <div class="content">
         <h2 class="section-header">Features</h2>
 
         <div class="container" id="features">
@@ -67,7 +68,7 @@
     <div style="background-color: #212529;">
         <h2 class="section-header" >Team</h2>
         <h3 class="section-subheading">The Team behind Ree6!</h3>
-        <div class="container" style="justify-content:space-between;">
+        <div class="container" id="team">
 
             <div class="team-member">
                 <img src="./assets/img/presti.png" class="team-member-avatar" alt="presti">
@@ -105,7 +106,7 @@
         </div>
     </div>
     <!--Invite-->
-    <div style="background-color:#405a9d; padding-bottom: 50px; ">
+    <div class="content">
         <h2 class="section-header">Invite</h2>
         <h3 class="section-subheading">Did we convince you?</h3>
         <br>
@@ -119,7 +120,7 @@
     <!--Footer-->
     <footer>
         <div style="flex:1;">
-            <h3 style="color:inherit;margin-top: 0;margin-bottom: 12px;font-weight: 700;">Legal</h3>
+            <h3>Legal</h3>
             <ul>
                 <li><a class="legal" href="https://ree6.de/legal/pp.html">Privacy Policy</a></li>
                 <li><a class="legal" href="https://ree6.de/legal/impresum.html">Impresum</a></li>
@@ -128,7 +129,7 @@
             </ul>
         </div>
         <div style="flex:1;">
-            <h3 style="color:inherit;margin-top: 0;margin-bottom: 12px;font-weight: 700;">Ree6</h3>
+            <h3>Ree6</h3>
             <p id="description">Ree6 has been made to support users and give them enough tools to support and manage their Guild. We don't like how most other discord Bots want you to pay for special "features". So we decided to change that.</p>
         </div>
     </footer>
@@ -140,8 +141,8 @@
         <a href="mailto:support@ree6.de"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="white" d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z"/></svg></a>
     </div>
     <!--copyright and etc-->
-    <div class="container" style="text-align: center; padding-top: 20px; padding-bottom: 30px;">
-        <p id="copyrightinfo">Ree6 &#169;  2022 <br> powered by Tube-Hosting <br> Site rewritten by <a href="https://github.com/H0L0theBard">H0L0</a> </p>
+    <div class="container" id="copyrightcontainer">
+        <p id="copyrightinfo">Ree6 &#169;  2022 <br> powered by Tube-Hosting <br> Site rewritten by <a id="h0l0" href="https://github.com/H0L0theBard">H0L0</a> </p>
     </div>
     <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
     <script>kofiWidgetOverlay.draw('presti', {'type': 'floating-chat','floating-chat.donateButton.text': 'Support me','floating-chat.donateButton.background-color': '#5bc0de','floating-chat.donateButton.text-color': '#323842'});</script>

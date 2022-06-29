@@ -1,78 +1,3 @@
-body{
-    font-family: sans-serif;
-    overflow-x: hidden;
-    margin: 0 0 0 0;
-}
-
-#boticon{
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-}
-
-.container{
-    max-width: 1320px;
-    display: flex;
-    margin: auto;
-    flex-wrap: wrap;
-}
-
-#loginbutton{
-    background-color: #56c6c6;
-    border-radius: 20px;
-    height: 24px;
-    padding: .5rem 1rem;
-    margin-top: auto;
-    margin-bottom: auto;
-    float: right;
-}
-#loginbutton a{
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    cursor: pointer;
-    color: white;
-    opacity: 1;
-}
-
-#name-desc{
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    padding-bottom: 5%;
-}
-
-.container h1{
-    color: white;
-    font-size: 4rem;
-    font-weight: 500;
-    line-height: 1.2;
-    margin-bottom: 0;
-}
-
-.container h2{
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 300;
-    line-height: 1.2;
-}
-
-.section-header{
-    font-size: 2rem;
-    text-align: center;
-    color: white;
-    padding-top: 4rem;
-}
-
-.section-subheading{
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 300;
-    line-height: 1.2; 
-    text-align: center;
-}
-
 #features{
     flex-wrap: wrap;
     flex-direction: row;
@@ -112,6 +37,10 @@ body{
     width: 40px;
     margin-right: 2.5vw;
     float: right;
+}
+
+#team{
+    justify-content: space-between;
 }
 
 .team-member{
@@ -168,122 +97,12 @@ body{
     font-size: 1em;
 }
 
-footer{
-    max-width: 1320px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: auto;
-    background-color: #212529; 
-    padding-top: 20px; 
-    color: #f0f9ff;
-    padding-bottom: 20px;
-}
-
-footer ul, a{
-    list-style: none;
-    color:inherit;
-    text-decoration: none;
-    padding: 0;
-    opacity: 0.6;
-    margin: 0;
-}
-
-.legal{
-    font-size: 16px;
-}
-
-#description{
-    opacity: .6;
-    color:inherit;
-    width: 30vw;
-    font-size: 16px;
-
-}
-
-footer div{
-    padding-left: 5vw;
-}
-
-#socials{
-    max-width: 1320px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#socials a{
-    margin: 0 10px;
-    height: 2em;
-    width: 2em;
-}
-
-#socials svg{
-    margin: 5px;
-    height: auto;
-}
-
-#copyrightinfo{
-    margin: auto; 
-    opacity: .8;
-    color:white;
-}
-
 @media only screen and (hover: none) and (pointer: coarse) {
-    #boticon{
-        width: 150px;
-        height: 150px; 
-    }
-
-
-    #loginbutton{
-        display: flex;
-        height: 48px;
-        width: 10vw;
-        align-items:center;
-        justify-content:center;
-    }
-    #loginbutton a{
-        font-size: x-large;
-    }
-
-    .container{
-        max-width: 80vw;
-    }
-    #name-desc{
-        margin-top: 0;
-        height: 20vh;
-        text-align: left;
-    }
-    
-    #name-desc h1{
-        margin-top: 0;
-        font-size: 6rem; 
-
-    }
-        
-    #name-desc h2{
-        margin-top: 0;
-        font-size: 3rem; 
-    }
-
     #features{
         flex-direction: column;
         font-size: 2rem;
     }
 
-    .section-header{
-        font-size: 4rem;
-        margin-top: 0;
-
-    }
-
-    .section-subheading{
-        font-size: 2rem;
-
-    }
-    
     .featureitem p{
         width: 800px;
     }
@@ -301,7 +120,11 @@ footer div{
     .featureitem svg{
         width: 80px;
     }
-    
+
+    #team{
+        flex-direction: column;
+    }
+
     .team-member{
         max-width: 800px;
         height: fit-content;
@@ -341,38 +164,4 @@ footer div{
         font-size: 2em;
     }
     
-    .legal{
-        font-size: 22px;
-    }
-
-    #description{
-        width: 40vw;
-        font-size: 22px;
-    }
-    footer{
-        justify-content: center;
-    }
-
-    footer div h3{
-        font-size: 30px;
-    }
-
-
-    footer li, a, footer p{
-        font-size: 1rem;
-    }
-    
-
-    #socials a{
-        height: 5em;
-        width: 5em;
-    }
-
-    #copyrightinfo{
-        font-size: 2rem;
-    }
-
-    #copyrightinfo a{
-        font-size: 2rem;
-    }
 }
