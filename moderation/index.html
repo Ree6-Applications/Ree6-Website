@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="icon" href="/imgs/logo.png" />
+    <title>REE6 | Moderation</title>
+    <style>
+      footer {
+        padding-top: 150px;
+      }
+      #home .img-wrapper {
+        height: 200px;
+        width: 200px;
+      }
+      #home .img-container {
+        width: 25vw;
+        height: 25vw;
+        margin: auto;
+        overflow: hidden;
+        margin-left: 5vw;
+        border-radius: 100%;
+      }
+      #home .img-wrapper:hover img {
+        transform: scale(1.1);
+      }
+      #home .img-container:hover img {
+        transform: scale(1.1);
+      }
+      .hamburger-container {
+        height: 90%;
+      }
+      .hero-statement h1 {
+        font-size: clamp(25px, 10.5vw, 135px);
+      }
+      section#home {
+        grid-template-columns: 1fr;
+      }
+      #home .hero-statement {
+        margin-left: 8%;
+      }
+      @media only screen and (max-width: 1350px) {
+        #home .hero-statement {
+          margin: auto;
+        }
+      }
+      @media only screen and (max-width: 400px) {
+        .hero-statement h1 {
+          letter-spacing: 5px;
+        }
+        .hero-statement .hero-descrip {
+          font-size: 12px;
+        }
+      }
+      @media only screen and (max-width: 360px) {
+        .msg-btn-add {
+          transform: translateY(calc(-100% - 10px));
+          padding: 7px 15px;
+          height: fit-content;
+        }
+      }
+      @media only screen and (max-height: 650px) {
+        .hamburger-container a {
+          font-size: 11px;
+        }
+      }
+      @media only screen and (max-height: 425px) {
+        .hamburger-container a {
+          font-size: 9px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="transition-fade"></div>
+    <div class="cursor"></div>
+    <div class="inner-cursor"></div>
+    <div class="cursor-modal"></div>
+    <header id="float-home">
+      <nav class="desktop-nav">
+        <a href="/panel/">Panel</a>
+        <a href="/server/">Server</a>
+        <a href="/logging/">Logging</a>
+        <a href="/moderation/" class="slide-active">Moderation</a>
+        <a href="/social/">Social</a>
+        <a href="/leaderboard/">Leaderboard</a>
+      </nav>
+      <button class="hamburger-button">
+        <span class="line-one"></span>
+        <span class="line-two"></span>
+      </button>
+      <nav class="hamburger-wrapper">
+        <div class="hamburger-container">
+          <a href="/panel/"><span>Panel</span></a>
+          <a href="/server/"><span>Server</span></a>
+          <a href="/logging/"><span>Logging</span></a>
+          <a href="/moderation/"><span>Moderation</span></a>
+          <a href="/social/"><span>Social</span></a>
+          <a href="/leaderboard/"><span>Leaderboard</span></a>
+          <a href="/"><span>Home</span></a>
+        </div>
+      </nav>
+    </header>
+    <a href="/" class="nav-arrow">
+      <div class="arrow-container">
+        <div class="arrow-wrapper">
+          <span class="circle"></span>
+          <div class="arrow">
+            <span class="line-one"></span>
+            <span class="line-two"></span>
+            <span class="line-three"></span>
+          </div>
+        </div>
+      </div>
+      <span class="inner-text">Back to Home</span>
+    </a>
+    <main>
+      <section id="home">
+        <div data-parallax data-xaxis="0" data-yaxis="0" class="hero-statement">
+          <h1 data-parallax data-xaxis="0.7" data-yaxis="0">
+            Mode<span class="dim-text">.rate</span>
+          </h1>
+          <div
+            data-parallax
+            data-xaxis="0.5"
+            data-yaxis="0"
+            class="hero-descrip"
+          >
+            Server <strong>Moderation</strong>
+          </div>
+        </div>
+      </section>
+      <section class="logging">
+        <div class="inner-logging-wrapper">
+          <div class="server-profile">
+            <div class="profile-img-wrapper">
+              <img src="/serverlogo/base.svg" alt="Server Logo" />
+            </div>
+            <h4>Server</h4>
+          </div>
+          <div class="logging-features">
+            <div class="channel-message-wrapper" data-state="">
+              <strong>Command Prefix</strong>
+              <form
+                action=""
+                method="post"
+                class="channel-message-wrapper"
+                data-state=""
+              >
+                <div
+                  class="message-button"
+                  data-highlight=""
+                  data-color-border="#ea0f77"
+                  data-color-dot="#ea0f77"
+                  data-color-background="#ffffff00"
+                >
+                  <input
+                    type="text"
+                    name="prefix"
+                    id="prefix"
+                    aria-valuemin="1"
+                    aria-valuemax="200"
+                    aria-modal=""
+                    autocomplete="off"
+                  />
+
+                  <label for="prefix">Prefix (Default: ree!)</label>
+                </div>
+                <button
+                  class="msg-btn-add"
+                  data-highlight=""
+                  data-color-background="#5865F2"
+                  data-color-dot="#fff"
+                  data-state=""
+                  type="submit"
+                >
+                  set
+                </button>
+                <div class="message-error" data-state=""></div>
+                <div class="character-count" data-state=""></div>
+                <button
+                  type="button"
+                  class="message-delete"
+                  data-highlight=""
+                  data-color-dot="#fff"
+                  data-color-background="#ef2222"
+                  data-state=""
+                >
+                  <img src="/imgs/trash.svg" alt="DELETE MESSAGE" />
+                </button>
+              </form>
+            </div>
+            <div class="channel-message-wrapper" data-state="">
+              <strong>Blacklist</strong>
+              <form
+                action=""
+                method="post"
+                class="channel-message-wrapper"
+                data-state=""
+              >
+                <div
+                  class="message-button"
+                  data-highlight=""
+                  data-color-border="#ea0f77"
+                  data-color-dot="#ea0f77"
+                  data-color-background="#ffffff00"
+                >
+                  <input
+                    type="text"
+                    name="prefix"
+                    id="prefix"
+                    aria-valuemin="2"
+                    aria-valuemax="200"
+                    aria-modal=""
+                    autocomplete="off"
+                  />
+
+                  <label for="prefix">Word</label>
+                </div>
+                <button
+                  class="msg-btn-add"
+                  data-state=""
+                  type="submit"
+                  data-highlight=""
+                  data-color-background="#5865F2"
+                  data-color-dot="#fff"
+                >
+                  add
+                </button>
+                <div class="message-error" data-state=""></div>
+                <div class="character-count" data-state=""></div>
+                <button
+                  type="button"
+                  class="message-delete"
+                  data-state=""
+                  data-highlight=""
+                  data-color-dot="#fff"
+                  data-color-background="#ef2222"
+                >
+                  <img src="/imgs/trash.svg" alt="DELETE MESSAGE" />
+                </button>
+              </form>
+              <div class="entries-wrapper">
+                <form action="" method="post" class="entries-list">
+                  <!--<div
+                    class="entry"
+                    data-highlight=""
+                    data-color-dot="#fff"
+                    data-color-border="#fff"
+                    data-color-background="#ffffff00"
+                  >
+                    <div class="inner-text">test</div>
+                    <button type="button" class="delete">
+                      <img src="/imgs/trash.svg" alt="DELETE MESSAGE" />
+                    </button>
+                  </div>-->
+                </form>
+              </div>
+            </div>
+            <form class="activation-options" action="" method="post">
+              <strong>Autoroles</strong>
+              <div class="logging-feature">
+                <input type="submit" name="@everyone" value="@everyone" />
+              </div>
+            </form>
+            <div
+              class="channel-dropdown-wrapper"
+              data-highlight=""
+              data-color-border="#ea0f77"
+              data-color-dot="#ea0f77"
+              data-color-background="#ffffff00"
+            >
+              <button class="dropdown-button">
+                <strong>Muterole</strong>
+                <span class="inner-text">Select Muterole</span>
+                <div class="dropdown-arrow-wrapper">
+                  <span class="line-one"></span>
+                  <span class="line-two"></span>
+                </div>
+              </button>
+              <form
+                data-highlight=""
+                data-color-border="#ea0f77"
+                data-color-dot="#ea0f77"
+                data-color-background="#ffffff00"
+                action=""
+                method="post"
+              >
+                <input
+                  class="channel-option-active"
+                  type="submit"
+                  name="select muterole"
+                  value="none"
+                />
+                <input type="submit" name="muterole ree6" value="Ree6" />
+                <input
+                  type="submit"
+                  name="muterole everyone"
+                  value="@everyone"
+                />
+              </form>
+            </div>
+            <form class="activation-options" action="" method="post">
+              <strong>Moderation Features</strong>
+              <div class="logging-feature">
+                <input type="submit" name="help" value="help" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="support" value="support" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="info" value="info" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="stats" value="stats" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="invite" value="invite" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="server" value="server" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="credits" value="credits" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="prefix" value="prefix" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="webinterface" value="webinterface" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="clear" value="clear" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="setup" value="setup" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="mute" value="mute" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="unmute" value="unmute" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="kick" value="kick" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="ban" value="ban" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="unban" value="unban" />
+              </div>
+              <div class="logging-feature">
+                <input
+                  type="submit"
+                  name="chatprotector"
+                  value="chatprotector"
+                />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="songinfo" value="songinfo" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="lyrics" value="lyrics" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="play" value="play" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="pause" value="pause" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="resume" value="resume" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="stop" value="stop" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="disconnect" value="disconnect" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="skip" value="skip" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="loop" value="loop" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="shuffle" value="shuffle" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="volume" value="volume" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="clearqueue" value="clearqueue" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="songlist" value="songlist" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="8ball" value="8ball" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="funfact" value="funfact" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="randomcat" value="randomcat" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="randomdog" value="randomdog" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="randommeme" value="randommeme" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="ping" value="ping" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="slap" value="slap" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="twitter" value="twitter" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="hornyjail" value="hornyjail" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="waifu" value="waifu" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="kiss" value="kiss" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="hug" value="hug" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="cringe" value="cringe" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="dogecoin" value="dogecoin" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="level" value="level" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="leaderboard" value="leaderboard" />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="twitch" value="twitch" />
+              </div>
+              <div class="logging-feature">
+                <input
+                  type="submit"
+                  name="twitternotifier"
+                  value="twitternotifier"
+                />
+              </div>
+              <div class="logging-feature">
+                <input type="submit" name="nsfw" value="nsfw" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        Ree6 has been made to support users and give them enough tools to
+        support and manage their Guild. We don't like how most of the Discord
+        Bots want you to pay for special "features". So we decided to change
+        that.
+      </p>
+      <div class="footer-nav">
+        <div class="nav-list">
+          <strong>Navigation</strong>
+          <a href="/panel/">Panel</a>
+          <a href="/server/">Server</a>
+          <a href="/logging/">Logging</a>
+          <a href="/moderation/">Moderation</a>
+          <a href="/social/">Social</a>
+          <a href="/leaderboard/">Leaderboard</a>
+          <a href="/">Home</a>
+        </div>
+        <div class="nav-list">
+          <strong>Legal</strong>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/impressum/">Impressum</a>
+          <a href="/protection/">Data Protection</a>
+          <button
+            data-copy="legal@ree6.de"
+            data-color-background="#ef2222"
+            data-color-dot="#fff"
+          >
+            legal@ree6.de
+          </button>
+        </div>
+        <div class="nav-list">
+          <strong>Contact</strong>
+          <a
+            href="https://discord.com/invite/m99MGKVxuC"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Discord</a
+          >
+          <a
+            href="https://twitter.com/ree6bot"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Twitter</a
+          >
+          <a
+            href="https://github.com/DxsSucuk/Ree6"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Github</a
+          >
+          <button
+            data-copy="support@ree6.de"
+            data-color-background="#ef2222"
+            data-color-dot="#fff"
+          >
+            support@ree6.de
+          </button>
+        </div>
+      </div>
+      <div class="copyright">
+        <span class="desktop">Developed and Designed by</span>
+        <a
+          href="https://www.presti.me/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Presti</a
+        >
+        <span class="desktop">&</span>
+        <a
+          href="https://creeperbuddy.github.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Creeper Buddy</a
+        >
+        ©Ree6 <span data-time="0"></span>
+      </div>
+      <script src="/js/time.js"></script>
+      <script src="/js/navigation.js"></script>
+      <script src="/js/cursor.js"></script>
+      <script src="/js/vanilla-tilt.js"></script>
+      <script src="/js/entrylist.js"></script>
+      <script src="/js/logging.js"></script>
+    </footer>
+  </body>
+</html>
