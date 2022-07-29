@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="icon" href="/imgs/logo.png" />
+    <title>REE6 | Impressum</title>
+    <style>
+      #home {
+        grid-template-columns: 1fr;
+      }
+      .hero-statement {
+        margin-left: 10%;
+      }
+      .hero-statement h1 {
+        font-size: clamp(25px, 10.5vw, 135px);
+        letter-spacing: 5px;
+      }
+      @media only screen and (max-width: 400px) {
+        .hero-statement .hero-descrip {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="transition-fade"></div>
+    <div class="cursor"></div>
+    <div class="inner-cursor"></div>
+    <div class="cursor-modal"></div>
+    <header>
+      <nav class="desktop-nav">
+        <a href="/#home">Home</a>
+        <a href="/#features">Features</a>
+        <a href="/#team">Team</a>
+        <a href="/#invite">Invite</a>
+        <a href="https://cp.ree6.de/discord/auth">Login</a>
+      </nav>
+      <button class="hamburger-button">
+        <span class="line-one"></span>
+        <span class="line-two"></span>
+      </button>
+      <nav class="hamburger-wrapper">
+        <div class="hamburger-container">
+          <a href="/#home"><span>Home</span></a>
+          <a href="/#features"><span>Features</span></a>
+          <a href="/#team"><span>Team</span></a>
+          <a href="/#invite"><span>Invite</span></a>
+          <a href="https://cp.ree6.de/discord/auth"><span>Login</span></a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="home">
+        <div data-parallax data-xaxis="0" data-yaxis="0" class="hero-statement">
+          <h1 data-parallax data-xaxis="0.7" data-yaxis="0">
+            Impr<span class="dim-text">.essum</span>
+          </h1>
+          <div
+            data-parallax
+            data-xaxis="0.5"
+            data-yaxis="0"
+            class="hero-descrip"
+          >
+            <strong>Ree6</strong> Impressum
+          </div>
+        </div>
+      </section>
+      <section class="list">
+        <article>
+          <h2>Service Provider</h2>
+          <ul>
+            <li>Baris Arslan</li>
+            <li>Perlebergerstraße 40</li>
+            <li>10559 Berlin</li>
+            <li>Deutschland</li>
+          </ul>
+        </article>
+        <article>
+          <h2>Contact Options</h2>
+          <ul>
+            <li>E-Mail Address: legal@ree6.de</li>
+            <li>
+              Contact Formula:
+              <a
+                href="https://support.ree6.de"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://support.ree6.de
+              </a>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <p>
+        Ree6 has been made to support users and give them enough tools to
+        support and manage their Guild. We don't like how most of the Discord
+        Bots want you to pay for special "features". So we decided to change
+        that.
+      </p>
+      <div class="footer-nav">
+        <div class="nav-list">
+          <strong>Navigation</strong>
+          <a href="/#home">Home</a>
+          <a href="/#features">Features</a>
+          <a href="/#team">Team</a>
+          <a
+            data-color-background="#5865F2"
+            data-color-dot="#fff"
+            href="https://invite.ree6.de"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Invite</a
+          >
+        </div>
+        <div class="nav-list">
+          <strong>Legal</strong>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/impressum/">Impressum</a>
+          <a href="/protection/">Data Protection</a>
+          <button
+            data-copy="legal@ree6.de"
+            data-color-background="#ef2222"
+            data-color-dot="#fff"
+          >
+            legal@ree6.de
+          </button>
+        </div>
+        <div class="nav-list">
+          <strong>Contact</strong>
+          <a
+            href="https://discord.com/invite/m99MGKVxuC"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Discord</a
+          >
+          <a
+            href="https://twitter.com/ree6bot"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Twitter</a
+          >
+          <a
+            href="https://github.com/DxsSucuk/Ree6"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Github</a
+          >
+          <button
+            data-copy="support@ree6.de"
+            data-color-background="#ef2222"
+            data-color-dot="#fff"
+          >
+            support@ree6.de
+          </button>
+        </div>
+      </div>
+      <div class="copyright">
+        <span class="desktop">Developed and Designed by</span>
+        <a
+          href="https://www.presti.me/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Presti</a
+        >
+        <span class="desktop">&</span>
+        <a
+          href="https://creeperbuddy.github.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Creeper Buddy</a
+        >
+        ©Ree6 <span data-time="0"></span>
+      </div>
+      <script src="/js/time.js"></script>
+      <script src="/js/navigation.js"></script>
+      <script src="/js/cursor.js"></script>
+    </footer>
+  </body>
+</html>
