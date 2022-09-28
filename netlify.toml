@@ -12,3 +12,8 @@
   from = "/*"
   to = "/500/"
   status = 500
+
+[[headers]]
+  for = "*"
+    [headers.values]
+      Access-Control-Allow-Origin = "*"
