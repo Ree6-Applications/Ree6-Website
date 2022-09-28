@@ -16,4 +16,4 @@
 [[headers]]
   for = "/*"
     [headers.values]
-    Access-Control-Allow-Origin = "cp.ree6.de"
+    Access-Control-Allow-Origin = "*ree6.de*"
