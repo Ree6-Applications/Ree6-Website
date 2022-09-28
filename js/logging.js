@@ -44,8 +44,8 @@ if (document.contains(cArr[0])) {
             channelButton.querySelector(".inner-text").innerHTML = option.name;
           }
         });
-      }
-    });
+      });
+    }
 
     // DROPDOWN OPTIONS SUBMISSION
     /* This is where you can submit data from dropdowns */
