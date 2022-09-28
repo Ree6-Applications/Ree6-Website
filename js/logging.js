@@ -28,23 +28,26 @@ if (document.contains(cArr[0])) {
     let channelInputs = channelForm.querySelectorAll("input");
     if (channelInputs != null) {
       let inputArr = Array.from(channelInputs);
-      inputArr[0].classList.add("channel-option-active");
 
-      // DROPDOWN OPTIONS
-      channelInputs.forEach(function (option) {
-        option.addEventListener("click", function () {
-          for (let index = 0; index <= inputArr.length - 1; index++) {
-            inputArr[index].classList.remove("channel-option-active");
-          }
-          option.classList.add("channel-option-active");
-          if (option.name == "no-channel") {
-            channelButton.querySelector(".inner-text").innerHTML =
-              "Select Channel";
-          } else {
-            channelButton.querySelector(".inner-text").innerHTML = option.name;
-          }
+      if (inputArr != null && inputArr.length > 0) {
+        inputArr[0].classList.add("channel-option-active");
+
+        // DROPDOWN OPTIONS
+        channelInputs.forEach(function (option) {
+          option.addEventListener("click", function () {
+            for (let index = 0; index <= inputArr.length - 1; index++) {
+              inputArr[index].classList.remove("channel-option-active");
+            }
+            option.classList.add("channel-option-active");
+            if (option.name == "no-channel") {
+              channelButton.querySelector(".inner-text").innerHTML =
+                "Select Channel";
+            } else {
+              channelButton.querySelector(".inner-text").innerHTML = option.name;
+            }
+          });
         });
-      });
+      }
     }
 
     // DROPDOWN OPTIONS SUBMISSION
