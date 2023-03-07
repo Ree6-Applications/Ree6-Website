@@ -1710,7 +1710,7 @@ section.logging {
   display: grid;
   grid-template-columns: 1fr;
   width: fit-content;
-  margin-left: 8%;
+  margin: auto;
   row-gap: 100px;
 }
 
