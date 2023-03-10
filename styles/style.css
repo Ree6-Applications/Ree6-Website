@@ -1071,6 +1071,7 @@ section#team::after {
   width: 100%;
   transform: translateY(50%) skewy(5deg);
   background-color: #000;
+  display:none;
   z-index: 1;
 }
 
@@ -1209,7 +1210,7 @@ section#invite {
   background-size: cover;
   width: 100%;
   height: 100%;
-  filter: saturate(0);
+  /*filter: saturate(0);*/
   z-index: -2;
 }
 

@@ -1,0 +1,19 @@
+body {
+  background-color: #434a45;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+footer {
+  background-color: black;
+  width: auto;
+  height: 250px;
+  color: #631c01;
+  text-align: center;
+}

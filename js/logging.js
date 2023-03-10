@@ -26,24 +26,29 @@ if (document.contains(cArr[0])) {
     let channelButton = channelDropdown.querySelector(".dropdown-button");
     let channelForm = channelDropdown.querySelector("form");
     let channelInputs = channelForm.querySelectorAll("input");
-    let inputArr = Array.from(channelInputs);
-    inputArr[0].classList.add("channel-option-active");
+    if (channelInputs != null) {
+      let inputArr = Array.from(channelInputs);
 
-    // DROPDOWN OPTIONS
-    channelInputs.forEach(function (option) {
-      option.addEventListener("click", function () {
-        for (let index = 0; index <= inputArr.length - 1; index++) {
-          inputArr[index].classList.remove("channel-option-active");
-        }
-        option.classList.add("channel-option-active");
-        if (option.name == "no-channel") {
-          channelButton.querySelector(".inner-text").innerHTML =
-            "Select Channel";
-        } else {
-          channelButton.querySelector(".inner-text").innerHTML = option.name;
-        }
-      });
-    });
+      if (inputArr != null && inputArr.length > 0) {
+        inputArr[0].classList.add("channel-option-active");
+
+        // DROPDOWN OPTIONS
+        channelInputs.forEach(function (option) {
+          option.addEventListener("click", function () {
+            for (let index = 0; index <= inputArr.length - 1; index++) {
+              inputArr[index].classList.remove("channel-option-active");
+            }
+            option.classList.add("channel-option-active");
+            if (option.name == "no-channel") {
+              channelButton.querySelector(".inner-text").innerHTML =
+                "Select Channel";
+            } else {
+              channelButton.querySelector(".inner-text").innerHTML = option.name;
+            }
+          });
+        });
+      }
+    }
 
     // DROPDOWN OPTIONS SUBMISSION
     /* This is where you can submit data from dropdowns */
@@ -59,7 +64,7 @@ const loggingOptionForms = document.querySelectorAll(".activation-options");
 let logFormArr = Array.from(loggingOptionForms);
 const loggingOptions = document.querySelectorAll(".logging-feature");
 
-if (document.contains(logFormArr[0])) {
+if (logFormArr != null && document.contains(logFormArr[0])) {
   logFormArr.forEach(function (loggingForm) {
     let submitArr = [];
     let options = loggingForm.querySelectorAll(".logging-feature");
