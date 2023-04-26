@@ -985,6 +985,8 @@ section#features {
   font-size: 225px;
   font-family: "Montserrat";
   font-weight: 700;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .summary h2 {
